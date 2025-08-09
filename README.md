@@ -1,12 +1,12 @@
 # Dual-Personality System 🤖
 
-### ProjectOverview
+### Project Overview
 
-This project, codenamed `bipolar-bot`, is a lighthearted, array-based conversational system that showcases two contrasting personalities: a positive Compliment Generator and a comically blunt Sarcastic Bot. Built for a one-day hackathon, it highlights how simple front-end technology can create an engaging and memorable user experience by playing with extremes in tone.
+This project `bipolar-bot`, is a lighthearted, array-based conversational system that showcases two contrasting personalities: a positive Compliment Generator and a comically blunt Sarcastic Bot. It highlights how simple front-end technology can create an engaging and memorable user experience by playing with extremes in tone.
 
 -----
 
-### KeyFeatures ✨
+### Key Features ✨
 
   * **Compliment Generator:** A module that provides a steady stream of uplifting remarks, designed for cheerful and encouraging feedback.
   * **Sarcastic Bot:** A contrasting module that delivers witty, blunt, and humorous retorts, playfully subverting the typical AI persona.
@@ -21,7 +21,7 @@ This project, codenamed `bipolar-bot`, is a lighthearted, array-based conversati
 
 -----
 
-### GettingStarted ▶️
+### Getting Started ▶️
 
 1.  **Clone the repository:**
     ```bash
