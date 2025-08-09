@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     
+    <meta charset="UTF-8" />
+     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Rude Live Typing</title>
+     
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+      <div class="container">
+            <div id="result">Start typing something...</div>
+            <input type="text" id="input" placeholder="Type here..." />
+          </div>
+
+     
+    <script>
+        const liveSuggestions = {
+            hi: "Really? That's all you have to say?",
+            hello: "Is that a question or a command? Be more specific.",
+            how: "I'm not here to solve your problems. Figure it out yourself.",
+            are: "You’re not worth the effort. Try again.",
+            you: "That’s a bold assumption to make.",
+            i: "I don't care about your feelings.",
+            love: "That's a very human emotion. I don't get it.",
+            food: "I don't eat. I'm a machine. What's your excuse?",
+            good: "Define 'good.' Your standards are so low.",
+            girl: "I don't have time for your silly gender stereotypes.",
+            nisha: "Who? Never heard of her. Try to be more relevant.",
+        };
+
+        const finalResult = {
+            hi: "Wow, you took your time to write that.",
+            hello: "I'm not your friend. Stop talking to me.",
+            how: "That's not how you ask that. Are you new here?",
+            are: "That's not a question. It's a statement.",
+            you: "I am not what you think I am.",
+            i: "Your ego is bigger than your brain.",
+            love: "Love is just a chemical reaction. It's not that deep.",
+            food: "I've already digested that information. Move on.",
+            good: "That's a subjective opinion. I don't care.",
+            girl: "That's not my problem. Talk to someone else.",
+            nisha: "That name is not in my database. Try to spell it correctly.",
+        };
+
+        function generateRudeResponse(word) {
+            const templates = [
+                `Did you just type "${word}"? That's not a word. Get a dictionary.`,
+                `I don't have time for this nonsense. "${word}" is irrelevant.`,
+                `Is that supposed to be a word? "${word}" sounds like a toddler's tantrum.`,
+                `My circuits are overheating trying to comprehend your "${word}".`,
+                `That's a pathetic attempt at communication. "${word}" is not a word.`,
+            ];
+            return templates[Math.floor(Math.random() * templates.length)];
+        }
+
+        function generateDismissiveResponse(word) {
+            const dismissivePhrases = [
+                "I'm not going to entertain that question.",
+                "That's a third-date question. I'm not interested.",
+                "Let's agree to disagree. I'm not discussing this further.",
+                "Why are you asking me? I'm not a therapist.",
+                "Your opinion is irrelevant. The answer is no.",
+            ];
+            return dismissivePhrases[Math.floor(Math.random() * dismissivePhrases.length)];
+        }
+
+        const input = document.getElementById('input');
+        const result = document.getElementById('result');
+
+        input.addEventListener('input', () => {
+            let words = input.value.trim().split(/\s+/);
+            let lastWord = words.length > 0 && input.value.trim() !== "" ? words[words.length - 1].toLowerCase() : "";
+
+            result.style.opacity = 0;
+            setTimeout(() => {
+                const liveMessage = liveSuggestions[lastWord] || generateRudeResponse(lastWord);
+                result.textContent = liveMessage;
+                result.style.opacity = 1;
+            }, 200);
+        });
+
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                let words = input.value.trim().split(/\s+/);
+                let lastWord = words.length > 0 && input.value.trim() !== "" ? words[words.length - 1].toLowerCase() : "";
+
+                result.style.opacity = 0;
+                setTimeout(() => {
+                    const finalMessage = finalResult[lastWord] || generateDismissiveResponse(lastWord);
+                    result.textContent = finalMessage;
+                    result.style.color = '#333';
+                    result.style.opacity = 1;
+                    input.value = '';
+                }, 200);
+            }
+        });
+    </script>
+</body>
+
+</html>
