@@ -1,0 +1,152 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+#welcome {
+    animation-name: pop-in;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #4682b4;
+}
+
+#compliment-input {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    font-size: 1.2em;
+    border: 2px solid #add8e6;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#compliment-input::placeholder {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #a0a0a0;
+}
+
+#compliment-display {
+    min-height: 80px;
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #1e90ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 2px dashed #add8e6;
+    border-radius: 8px;
+}
+
+@keyframes color-change {
+    0% {
+        background-color: #ffcccc;
+    }
+
+    /* Start with a light red */
+    50% {
+        background-color: #ccffcc;
+    }
+
+    /* Transition to a light green */
+    100% {
+        background-color: #ccccff;
+    }
+
+    /* End with a light blue */
+}
+
+body {
+    animation-name: color-change;
+    animation-duration: 10s;
+    /* The animation takes 10 seconds */
+    animation-iteration-count: infinite;
+    /* It repeats forever */
+    animation-direction: alternate;
+    /* It plays forward and then backward */
+}
+
+@keyframes pop-in {
+    0% {
+        transform: scale(0.5);
+        /* Start at half its size */
+        opacity: 0;
+        /* And completely transparent */
+    }
+
+    80% {
+        transform: scale(1.1);
+        /* Quickly grow to be slightly larger than normal */
+        opacity: 1;
+        /* And fully visible */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Settle back down to its normal size */
+    }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    /* Removes the bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Aligns the list items horizontally */
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-button {
+    display: inline-block;
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #007bff;
+    /* A nice blue hover effect */
+}
+
+#input {
+    font-size: 40px;
+}
