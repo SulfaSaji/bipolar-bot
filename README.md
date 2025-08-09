@@ -1,16 +1,15 @@
 Dual-Personality System 🤖
-Project Overview
-This project, codenamed Bipolar Bot, is an engaging, front-end conversational system that showcases two distinct AI personalities. It leverages simple array-based logic to create a dynamic user experience, seamlessly switching between a positive Compliment Generator and a comically blunt Sarcastic Bot. Built for a one-day hackathon, this project demonstrates how minimal front-end technology can be used to create a memorable user experience by playing with extremes in tone and interaction.
+
+#ProjectOverview
+This project, codenamed Bipolar Bot, is a lighthearted and engaging front-end conversational system. It showcases two distinct and contrasting AI personalities: a positive Compliment Generator and a comically blunt Sarcastic Bot. Built during a one-day hackathon, this project demonstrates how simple array-based logic and minimal front-end technology can be used to create a memorable user experience by playing with extremes in tone and interaction.
 
 #KeyFeatures ✨
 Compliment Generator: A module designed to provide a steady stream of uplifting and encouraging remarks.
 
-Sarcastic Bot: A contrasting module that delivers witty and humorous retorts, subverting the typical AI persona with playful bluntness.
-
-
+Sarcastic Bot: A contrasting module that delivers witty, humorous, and playfully blunt retorts.
 
 #TechStack 💻
-HTML5: Serves as the foundational structure of the project.
+HTML5: Provides the foundational structure of the project.
 
 CSS3: Handles all styling, layout, and visual animations.
 
@@ -29,16 +28,15 @@ Navigate to the project directory:
 Bash
 
 cd bipolar-bot
+Run the project: Open the following files in your web browser:
 
-Run the project:
+Home Page: index.html
 
-Home Page: Open the index.html file in your web browser. This serves as your main landing page.
+Compliment Generator: compliment.html
 
-Compliment Generator: Open the compliment.html file.
+Rude Bot: rude.html
 
-Rude Bot: Open the rude.html file.
-
-Team 🤝
+#Team 🤝
 Navomy Mariya Alex
 
 Sulfa Saji
